@@ -20,9 +20,9 @@ class Cheese(TimeStampedModel):
     firmness = models.CharField("firmness", max_length=20, choices= Firmness.choices, default=Firmness.UNSPECIFIED)
 
     creator = models.ForeignKey(
-        settings.AUTH_USER_MODEL,
+        settings.AUTH_USER_MODEL,  #get_user_model()
         null=True,
-        on_delete=models.SET_NULL #get_user_model()
+        on_delete=models.SET_NULL
     )
     def __str__(self):
         return self.name
