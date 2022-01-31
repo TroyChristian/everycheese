@@ -79,4 +79,4 @@ def test_cheese_create_form_valid(rf, admin_user):
 
     assert cheese.description == "A salty hard cheese"
     assert cheese.firmness == Cheese.Firmness.HARD
-    assert cheese.creator == admin_user 
+    assert cheese.creator == admin_user
